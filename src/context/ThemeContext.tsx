@@ -1,25 +1,30 @@
 import { createContext, ReactNode, useReducer } from "react";
 
 interface ContextInterface {
-  bgColor: string;
-  changBgNav(color: string): void;
+  position: string;
+  setPosition(x: string): void;
+  theme: string;
+  setTheme(x: string): void;
 }
 
-interface ContextAction {
+interface ActionReducer {
   type: string;
   payload: string;
 }
 
-
 export const ThemeContext = createContext<ContextInterface>({
-  bgColor: '',
-  changBgNav: (color: string) => { }
+  position: '',
+  setPosition: (x: string) => { },
+  theme: '',
+  setTheme: (x: string) => { }
 });
 
-function ThemeReducer(state: Omit<ContextInterface, "changBgNav">, action: ContextAction) {
+function ThemeReducer(state: Omit<ContextInterface, "setPosition" | "setTheme">, action: ActionReducer) {
   switch (action.type) {
-    case "CHNG_BG_NAV":
-      return { ...state, bgColor: action.payload }
+    case "POSITION":
+      return { ...state, position: action.payload };
+    case "THEME":
+      return { ...state, theme: action.payload };
     default:
       return state
   }
@@ -28,19 +33,21 @@ function ThemeReducer(state: Omit<ContextInterface, "changBgNav">, action: Conte
 export function ThemeProvider({ children }: { children: ReactNode }) {
 
   const [state, dispatch] = useReducer(ThemeReducer, {
-    bgColor: '#005670',
-  })
+    position: "0% 0%",
+    theme: 'light',
+  });
 
-  function changBgNav(color: string) {
-    dispatch({ type: "CHNG_BG_NAV", payload: color });
+  function setPosition(position: string) {
+    dispatch({ type: "POSITION", payload: position })
+  }
+
+  function setTheme(theme: string) {
+    dispatch({ type: "THEME", payload: theme })
   }
 
   return (
-    <ThemeContext.Provider
-      value={{ ...state, changBgNav }}
-    >
+    < ThemeContext.Provider value={{ ...state, setPosition, setTheme }}>
       {children}
-    </ThemeContext.Provider>
-  )
+    </ ThemeContext.Provider>)
 
 }

@@ -2,9 +2,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background: linear-gradient(#1d9ee9, #005670); */
-  /* background: linear-gradient(#bd22b5, #960057); */
-  /* background: linear-gradient(#00a693, #01584e); */
+  background:
+    linear-gradient(#005670 33.33%, #960057 33.33%, #960057 66.66%, #ff5e00 66.66%);
+  background-size: 100% 300%;
   box-shadow: 0 -5px 20px 5px rgba(0, 0, 0, 0.5);
   transition: all 0.5s ease;
 }
@@ -65,21 +65,7 @@ nav .create {
   border-radius: 50%;
   cursor: pointer;
   margin: 0 5px;
-  background: linear-gradient(-45deg, #1d9ee9, #005670);
-  transition: transform 0.2s ease-in-out;
-
-  &:hover {
-    transform: scale(1.2);
-  }
-}
-
-.set-color .nav-color .nav-green {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  margin: 0 5px;
-  background: linear-gradient(-45deg, #00a693, #01584e);
+  background: #005670;
   transition: transform 0.2s ease-in-out;
 
   &:hover {
@@ -93,7 +79,21 @@ nav .create {
   border-radius: 50%;
   cursor: pointer;
   margin: 0 5px;
-  background: linear-gradient(-45deg, #bd22b5, #960057);
+  background: #960057;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.set-color .nav-color .nav-orange {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 5px;
+  background: #ff5e00;
   transition: transform 0.2s ease-in-out;
 
   &:hover {
@@ -111,4 +111,9 @@ nav .create {
 .set-img img {
   width: 100%;
   object-fit: cover;
+  filter: invert(100%);
+}
+
+body.dark .set-img img {
+  filter: invert(0%);
 }

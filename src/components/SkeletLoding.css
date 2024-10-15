@@ -11,3 +11,8 @@
     box-shadow: 6px 6px 10px 5px rgba(0, 0, 0, 0.5);
   }
 }
+
+body.dark .home .loaditem,
+body.dark .search .loaditem{
+  outline: 2px solid #E5D9F2;
+}

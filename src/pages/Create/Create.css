@@ -2,13 +2,21 @@
   width: 60%;
   margin-inline: auto;
   font-family: 'Ubuntu';
-  color: #021526;
+}
+
+body.dark .create-form {
+  color: #E5D9F2;
 }
 
 .create-form h2 {
   padding: 10px;
   font-size: 3rem;
   border-bottom: #021526 2px solid;
+}
+
+body.dark .create-form h2{
+  border-bottom: #F5EFFF 2px solid;
+
 }
 
 .create-form form {
