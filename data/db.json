@@ -1,0 +1,93 @@
+{
+  "recipes": [
+    {
+      "id": "1",
+      "title": "Veggie Stew",
+      "ingredients": [
+        "1 Carrot",
+        "1 Leek",
+        "200g Tofu",
+        "300ml Veg stock"
+      ],
+      "method": "To make a hearty veggie stew, start by heating olive oil in a large pot over medium heat. Add chopped onions, carrots, and celery, sautéing until softened. Then, stir in minced garlic, cooking for another minute. Add your choice of vegetables, such as diced potatoes, zucchini, bell peppers, and green beans. Pour in vegetable broth to cover the veggies and season with salt, pepper, dried thyme, and bay leaves. For extra flavor, you can add a can of diced tomatoes and some tomato paste. Bring the stew to a boil, then reduce the heat to a simmer and cover the pot. Let the stew cook for about 30-40 minutes, or until the vegetables are tender. Stir in fresh herbs like parsley or thyme towards the end of cooking. If you like a thicker stew, you can mash some of the potatoes or add a slurry of cornstarch and water. Serve hot, with crusty bread on the side. This veggie stew is a comforting, nutrient-packed dish that's perfect for a cozy meal!",
+      "cookingTime": "45 minutes"
+    },
+    {
+      "id": "2",
+      "title": "Veggie Pizza",
+      "ingredients": [
+        "1 Base",
+        "Tomata pasata",
+        "1 Green pepper",
+        "100g Mushrooms"
+      ],
+      "method": "To make a delicious veggie pizza, start by rolling out your pizza dough on a floured surface to your desired thickness. Preheat your oven to around 475°F (245°C). Spread a thin layer of tomato sauce evenly across the dough, leaving a small border for the crust. Sprinkle shredded mozzarella cheese on top. Now, layer on your vegetables—sliced bell peppers, mushrooms, onions, tomatoes, and spinach are great choices. You can also add olives, artichokes, or zucchini for extra variety. Drizzle a little olive oil over the veggies and sprinkle with dried oregano, basil, and a pinch of salt and pepper. Bake the pizza in the preheated oven for 10-15 minutes, or until the crust is golden and the cheese is bubbly. Once cooked, let it cool slightly before slicing. Enjoy your fresh and flavorful veggie pizza, perfect for a wholesome, satisfying meal!",
+      "cookingTime": "35 minutes"
+    },
+    {
+      "id": "3",
+      "title": "Greek Salad",
+      "ingredients": [
+        "1 Onion",
+        "1 Block of Feta",
+        "Olives",
+        "Tomatoes",
+        "Olive Oil"
+      ],
+      "method": "To make a classic Greek salad, start by cutting ripe tomatoes, cucumber, and red onion into bite-sized pieces. Add pitted Kalamata olives and chunks of creamy feta cheese. For the dressing, whisk together extra virgin olive oil, red wine vinegar, salt, pepper, and a pinch of dried oregano. You can also add a touch of lemon juice for extra brightness. Toss the vegetables and olives with the dressing, ensuring everything is well-coated. Arrange the feta cheese on top, and drizzle a little more olive oil and sprinkle oregano over the cheese. Traditionally, Greek salad is served with the feta in large blocks rather than crumbled. It’s best enjoyed fresh, paired with crusty bread to soak up the juices. Optionally, add green bell peppers or capers for a more authentic touch. Greek salad is a simple, refreshing dish full of Mediterranean flavors, perfect as a side or a light meal on its own.",
+      "cookingTime": "35 minutes"
+    },
+    {
+      "id": "4",
+      "title": "Mushroom Soup",
+      "ingredients": [
+        "500g mushrooms",
+        "1 medium onion",
+        "2 tbsp butter or olive oil",
+        "3 tbsp all-purpose flour",
+        "4 cups vegetable or chicken broth",
+        "1 cup heavy cream or milk",
+        "Salt and pepper (to taste)",
+        "Fresh thyme or parsley (optional, for garnish)"
+      ],
+      "method": "To make a creamy mushroom soup, start by melting 2 tablespoons of butter in a large pot over medium heat. Add one finely chopped onion and sauté for 5 minutes until soft. Stir in 3 cloves of minced garlic and cook for another minute. Next, add 500g of sliced mushrooms and cook for about 10 minutes, stirring occasionally, until the mushrooms release their moisture and turn golden. Sprinkle 3 tablespoons of flour over the mushrooms and stir well, cooking for 2 minutes to thicken the mixture. Gradually pour in 4 cups of vegetable or chicken broth, stirring constantly to avoid lumps, and bring the soup to a simmer. Let it cook for about 10 minutes until it thickens slightly. For a smooth soup, blend the mixture using an immersion blender or regular blender. If you prefer a chunkier texture, skip blending. Stir in 1 cup of heavy cream or milk and allow the soup to warm through without boiling. Season with salt and pepper to taste. Serve the soup hot, garnished with fresh thyme or parsley if desired, and pair it with crusty bread for a hearty meal.",
+      "cookingTime": "120 minutes"
+    },
+    {
+      "id": "5",
+      "title": "Sushi",
+      "ingredients": [
+        "2 cups sushi rice",
+        "3 cups water",
+        "2 tbsp rice vinegar",
+        "0.5 tsp salt",
+        "1 tbsp sugar",
+        "Nori (seaweed sheets)",
+        "Fresh vegetables (like cucumber, avocado, carrots, etc.)",
+        "Fresh fish (like salmon or tuna) or cooked shrimp (optional)",
+        "Soy sauce, wasabi, and pickled ginger for serving"
+      ],
+      "method": "To prepare sushi, begin by rinsing 2 cups of sushi rice until the water runs clear, then cook it with 3 cups of water. Once cooked, mix 2 tablespoons of rice vinegar, 1 tablespoon of sugar, and ½ teaspoon of salt, and gently fold it into the rice. Let the rice cool. On a bamboo mat, place a sheet of nori with the shiny side facing down. Wet your hands to prevent sticking, then spread a thin layer of rice evenly over the nori, leaving about an inch at the top edge free. Arrange your fillings (like sliced cucumber, avocado, and fresh fish) in a line along the bottom third of the rice. Roll the sushi tightly, using the mat to help guide it, and press the seam to seal. Slice the roll into bite-sized pieces and serve with soy sauce, wasabi, and pickled ginger on the side.",
+      "cookingTime": "70 minutes"
+    },
+    {
+      "id": "6",
+      "title": "Apple Pie",
+      "ingredients": [
+        "2.5 cups all-purpose flour",
+        "1 cup unsalted butter (cold, cubed)",
+        "1 tsp salt",
+        "6-8 tbsp ice water",
+        "6 medium apples (Granny Smith or your favorite variety)",
+        "0.75cup sugar",
+        "2 tbsp all-purpose flour",
+        "1 tsp cinnamon",
+        "0.25 tsp nutmeg",
+        "1 tbsp lemon juice",
+        "1 egg (beaten, for brushing)"
+      ],
+      "method": "To make apple pie, start by preparing the crust: in a large bowl, mix 2 ½ cups of flour and 1 teaspoon of salt. Cut in 1 cup of cold, cubed butter until the mixture resembles coarse crumbs. Gradually add 6-8 tablespoons of ice water, one tablespoon at a time, and mix until the dough comes together. Divide the dough in half, shape each into a disk, wrap them in plastic, and chill for at least 30 minutes. For the filling, peel and thinly slice 6 apples, then toss them with ¾ cup of sugar, 2 tablespoons of flour, 1 teaspoon of cinnamon, ¼ teaspoon of nutmeg, and 1 tablespoon of lemon juice. Preheat your oven to 375°F (190°C). Roll out one dough disk and place it into a pie dish. Add the apple filling, then roll out the second dough disk and lay it on top, crimping the edges to seal. Cut a few slits in the top crust for ventilation. Brush the top with beaten egg, and bake for 50-60 minutes, until golden brown. Let it cool before serving.",
+      "cookingTime": "50 minutes"
+    }
+  ]
+}

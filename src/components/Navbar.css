@@ -1,0 +1,114 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: linear-gradient(#1d9ee9, #005670); */
+  /* background: linear-gradient(#bd22b5, #960057); */
+  /* background: linear-gradient(#00a693, #01584e); */
+  box-shadow: 0 -5px 20px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
+}
+
+nav .brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 30px;
+  color: whitesmoke;
+  font-family: 'Cookie';
+  text-decoration: none;
+  font-style: italic;
+  font-size: 2rem;
+}
+
+.brand img {
+  color: whitesmoke;
+  width: 3rem;
+  aspect-ratio: 1;
+  margin: 5px 5px;
+}
+
+nav .access {
+  margin-right: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav .create {
+  padding: 5px;
+  font-family: 'DM Sans';
+  text-decoration: none;
+  font-size: 1rem;
+  border: 2px solid whitesmoke;
+  color: whitesmoke;
+  border-radius: 10px;
+}
+
+.set-color {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.set-color .nav-color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.set-color .nav-color .nav-blue {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 5px;
+  background: linear-gradient(-45deg, #1d9ee9, #005670);
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.set-color .nav-color .nav-green {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 5px;
+  background: linear-gradient(-45deg, #00a693, #01584e);
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.set-color .nav-color .nav-pink {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 5px;
+  background: linear-gradient(-45deg, #bd22b5, #960057);
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.set-color .set-img {
+  width: 30px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.set-img img {
+  width: 100%;
+  object-fit: cover;
+}
