@@ -3,6 +3,7 @@ import RecipeList from '../../components/RecipeList';
 import SkeletLoding from '../../components/SkeletLoding';
 import { useLocation } from 'react-router-dom';
 import useFetch from '../../hooks/useFetch';
+import { FoodItem } from '../../models/Interfaces';
 
 export default function Search() {
 
@@ -11,7 +12,7 @@ export default function Search() {
   const query = queryParams.get('q');
 
   const url = 'http://localhost:4000/recipes?q=' + query;
-  const { data, error, isLoading } = useFetch(url);
+  const { data, error, isLoading } = useFetch<FoodItem[]>(url);
 
   return (
     <>

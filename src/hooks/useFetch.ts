@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { FoodItem, FoodNoId } from '../models/Interfaces';
+import { FoodNoId } from '../models/Interfaces';
 
-export default function useFetch<T extends FoodItem[]>(url: string, method = 'GET') {
+export default function useFetch<T>(url: string, method = 'GET') {
 
   const [data, setData] = useState<T | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -19,7 +19,7 @@ export default function useFetch<T extends FoodItem[]>(url: string, method = 'GE
   }
 
   useEffect(() => {
-    console.log(url);
+
     async function fetchData(fetchOption?: RequestInit) {
 
       try {
@@ -37,6 +37,7 @@ export default function useFetch<T extends FoodItem[]>(url: string, method = 'GE
         setIsLoading(false);
       }
     }
+
     if (method === 'GET') {
       const timer = setTimeout(() => {
         fetchData();

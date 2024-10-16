@@ -13,13 +13,6 @@ export default function Create() {
   const navigation = useNavigate();
   const { postData } = useFetch('http://localhost:4000/recipes', 'POST');
 
-  //ye model dige baraye redirect kardn be home!
-  // useEffect(() => {
-  //   if (data) {
-  //     navigation('/')
-  //   }
-  // }, [data])
-
   return (
 
       <div className='create-form'>

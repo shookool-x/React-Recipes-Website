@@ -8,14 +8,16 @@ import useTheme from '../../hooks/useTheme';
 
 export default function Recipe() {
   const { id } = useParams();
-  const { data, error, isLoading } = useFetch<FoodItem[]>('http://localhost:4000/recipes');
-  const fData = data?.filter(item => item.id === id);
+
+  const url = 'http://localhost:4000/recipes/' + id;
+  const { data, error, isLoading } = useFetch<FoodItem>(url);
 
   const { theme } = useTheme()
   return (
 
     <div className='recipes' >
-      {error && <p className='error'>{error}</p>}
+      {error && error !== 'Not Found' &&
+        <p className='error'>{error}</p>}
       {isLoading &&
         <SkeletonTheme
           baseColor={theme === 'dark' ? "#E5D9F2" : "#021526"}
@@ -30,21 +32,21 @@ export default function Recipe() {
         </SkeletonTheme>
       }
       {
-        fData?.length === 0 &&
+        !data && !isLoading &&
         <div className='item'>
           <h1>There is No Food!</h1>
         </div>
       }
-      {fData?.[0] &&
+      {data &&
         <div className='item'>
-          <h3>{fData[0].title}</h3>
-          <p>{fData[0].cookingTime} to make</p>
+          <h3>{data.title}</h3>
+          <p>{data.cookingTime} to make</p>
           <hr />
           <ol>
-            {fData[0].ingredients.map(item => <li key={item}>{item}</li>)}
+            {data.ingredients.map(item => <li key={item}>{item}</li>)}
           </ol>
           <hr />
-          <div>{fData[0].method}</div>
+          <div>{data.method}</div>
         </div>
       }
     </div>
