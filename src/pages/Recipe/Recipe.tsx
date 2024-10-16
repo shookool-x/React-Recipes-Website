@@ -1,22 +1,53 @@
-import { useParams } from 'react-router-dom';
-import useFetch from '../../hooks/useFetch';
-import { FoodItem } from '../../models/Interfaces';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
-import './Recipe.css';
+import { FoodNoId } from '../../models/Interfaces';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import useTheme from '../../hooks/useTheme';
+import './Recipe.css';
+
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../../firebase/config';
 
 export default function Recipe() {
   const { id } = useParams();
 
-  const url = 'http://localhost:4000/recipes/' + id;
-  const { data, error, isLoading } = useFetch<FoodItem>(url);
+  const [data, setData] = useState<FoodNoId>();
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+
+
+  useEffect(() => {
+    setIsLoading(true)
+    if (!id) {
+      return;
+    }
+    const ref = doc(db, 'recipes', id);
+
+    getDoc(ref)
+      .then(doc => {
+        if (!doc.exists()) {
+          setError('No Item To Show');
+          setIsLoading(false);
+        } else {
+          const food: FoodNoId = {
+            title: doc.data().title || '',
+            ingredients: doc.data().ingredients || [],
+            method: doc.data().method || '',
+            cookingTime: doc.data().cookingTime || '',
+          }
+          setIsLoading(false);
+          setData(food)
+        }
+      })
+
+  }, [id])
 
   const { theme } = useTheme()
   return (
 
     <div className='recipes' >
-      {error && error !== 'Not Found' &&
+      {error &&
         <p className='error'>{error}</p>}
       {isLoading &&
         <SkeletonTheme

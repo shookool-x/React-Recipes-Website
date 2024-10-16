@@ -30,6 +30,7 @@ export default function Home() {
           const result: FoodItem[] = [];
 
           snapshot.docs.forEach(doc => {
+
             const fooditem: FoodItem = {
               id: doc.id,
               title: doc.data().title || '',
