@@ -1,5 +1,6 @@
 .home .recipe-item,
 .search .recipe-item {
+  position: relative;
   font-family: 'Roboto';
   color: #021526;
   padding: 20px;
@@ -82,5 +83,18 @@ body.dark .search .recipe-item a {
   &:hover {
     background-color: #A594F9;
     color: #021526;
+  }
+}
+
+.ashghali {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 20px;
+  aspect-ratio: 1;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
   }
 }
