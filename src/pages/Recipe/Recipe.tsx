@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import useTheme from '../../hooks/useTheme';
 import './Recipe.css';
 
-import { doc, getDoc } from 'firebase/firestore';
+import { doc, onSnapshot, updateDoc } from 'firebase/firestore';
 import { db } from '../../firebase/config';
 
 export default function Recipe() {
@@ -24,22 +24,23 @@ export default function Recipe() {
     }
     const ref = doc(db, 'recipes', id);
 
-    getDoc(ref)
-      .then(doc => {
-        if (!doc.exists()) {
-          setError('No Item To Show');
-          setIsLoading(false);
-        } else {
-          const food: FoodNoId = {
-            title: doc.data().title || '',
-            ingredients: doc.data().ingredients || [],
-            method: doc.data().method || '',
-            cookingTime: doc.data().cookingTime || '',
-          }
-          setIsLoading(false);
-          setData(food)
+    const unsub = onSnapshot(ref, (doc) => {
+      if (!doc.exists()) {
+        setError('No Item To Show');
+        setIsLoading(false);
+      } else {
+        const food: FoodNoId = {
+          title: doc.data().title || '',
+          ingredients: doc.data().ingredients || [],
+          method: doc.data().method || '',
+          cookingTime: doc.data().cookingTime || '',
         }
-      })
+        setIsLoading(false);
+        setData(food)
+      }
+    })
+
+    return () => unsub();
 
   }, [id])
 
@@ -78,9 +79,23 @@ export default function Recipe() {
           </ol>
           <hr />
           <div>{data.method}</div>
+          <button onClick={handleChangTitle}>Change Title to Amir!</button>
         </div>
       }
     </div>
 
   )
+
+  async function handleChangTitle() {
+    try {
+      if (!id) {
+        return;
+      }
+      const ref = doc(db, 'recipes', id);
+      await updateDoc(ref, { title: 'Chef Amir!' })
+
+    } catch (error) {
+
+    }
+  }
 }
